@@ -20,7 +20,7 @@ public class Main {
             int userChoice = sc.nextInt();
            
             if (userChoice == 1) {
-                displayAll();
+                displayAllElectronics();
             }else if (userChoice == 2) {
                 addTv();
             }else if (userChoice == 3) {
@@ -34,8 +34,12 @@ public class Main {
             }     
         
         }
-        public static void displayAll() {
-
+        public static void displayAllElectronics() {
+            for(int i = 0; i < electronicProducts.size(); i++) {
+                Electronics e = electronicProducts.get(i);
+                System.out.println("Index of product is " + i);
+                e.display();
+            }
         }
 	}
 }
