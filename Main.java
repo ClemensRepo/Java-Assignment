@@ -44,12 +44,20 @@ public class Main {
 
         public static void updateElectronic() {
             displayAllElectronics();
-            System.out.println("Key in the index of the electronic product you want to amend");
+            System.out.println("Key in the index of the electronic product you want to UPDATE");
             electronicProductIndex = sc.nextInt();
             sc.nextLine();
             Electronics e = electronicProducts.get(i);
             e.editElectronic(sc);
 
+        }
+
+        public static void deleteElectronics() {
+            displayAllElectronics();
+            System.out.println("Key in the index of the elctronic product you want to DELETE");
+            electronicProductIndex = sc.nextInt();
+            sc.nextLine();
+            electronicProducts.remove(electronicProductIndex);
         }
 	}
 }
