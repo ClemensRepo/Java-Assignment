@@ -31,9 +31,50 @@ public class Main {
                 deleteElectronics();
             }else if (userChoice == 6) {
                 break;
-            }     
+            }else {
+             System.out.println("You have entered an invalid option. Please try again!");   
+            }  
         
         }
+
+        public static void addTv() {
+
+           Electronics p;
+
+            System.out.println("Enter the brand");
+            String brand = sc.nextLine()
+            sc.nextLine();
+            System.out.println("Enter the model");
+            String model = sc.nextLine();
+            sc.nextLine();
+            System.out.println("Enter the power");
+            double power = sc.nextDouble();
+            sc.nextLine();
+            System.out.println("Enter the screen size");
+            double screensize = sc.nextInt();
+
+            p = new Tv(brand, model, power, screensize);            
+        }
+
+        public static void addTv() {
+
+            Electronics p;
+ 
+             System.out.println("Enter the brand");
+             String brand = sc.nextLine()
+             sc.nextLine();
+             System.out.println("Enter the model");
+             String model = sc.nextLine();
+             sc.nextLine();
+             System.out.println("Enter the power");
+             double power = sc.nextDouble();
+             sc.nextLine();
+             System.out.println("Enter the suction power");
+             double screensize = sc.nextDouble();
+ 
+             p = new vacuumCleaner(brand, model, power, screensize);            
+         }
+
         public static void displayAllElectronics() {
             for(int i = 0; i < electronicProducts.size(); i++) {
                 Electronics e = electronicProducts.get(i);
