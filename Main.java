@@ -53,7 +53,8 @@ public class Main {
             System.out.println("Enter the screen size");
             double screensize = sc.nextInt();
 
-            p = new Tv(brand, model, power, screensize);            
+            p = new Tv(brand, model, power, screensize);    
+            electronicProducts.add(p);
         }
 
         public static void addTv() {
@@ -72,7 +73,8 @@ public class Main {
              System.out.println("Enter the suction power");
              double screensize = sc.nextDouble();
  
-             p = new vacuumCleaner(brand, model, power, screensize);            
+             p = new vacuumCleaner(brand, model, power, screensize);          
+             electronicProducts.add(p);  
          }
 
         public static void displayAllElectronics() {
