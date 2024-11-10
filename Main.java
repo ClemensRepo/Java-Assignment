@@ -26,7 +26,7 @@ public class Main {
             }else if (userChoice == 3) {
                 addVacuumCleaner();
             }else if (userChoice == 4) {
-                updateElectronics();
+                updateElectronic();
             }else if (userChoice == 5) {
                 deleteElectronics();
             }else if (userChoice == 6) {
@@ -40,6 +40,16 @@ public class Main {
                 System.out.println("Index of product is " + i);
                 e.display();
             }
+        }
+
+        public static void updateElectronic() {
+            displayAllElectronics();
+            System.out.println("Key in the index of the electronic product you want to amend");
+            electronicProductIndex = sc.nextInt();
+            sc.nextLine();
+            Electronics e = electronicProducts.get(i);
+            e.editElectronic(sc);
+
         }
 	}
 }
