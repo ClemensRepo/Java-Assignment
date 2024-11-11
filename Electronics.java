@@ -1,23 +1,25 @@
+import java.util.Scanner;
+
 class Electronics {
 	private static int count;
 
 	protected String brand;
 	protected String model;
 	protected double price;
-	protected double power;
+	protected double price;
 
 	public Electronics() {
 		this.brand = "";
 		this.model = "N/A";
 		this.price = 0;
-		this.power = 0;
+		this.price = 0;
 	}
 
-	public Electronics(String brand, String model, double price, double power) {
+	public Electronics(String brand, String model, double price, double price) {
 		this.brand = brand;
 		this.model = model;
 		this.price = price;
-		this.power = power;
+		this.price = price;
 	}
 
 
@@ -25,7 +27,7 @@ class Electronics {
 		return brand;
 	}
 
-	public void setbrand(String brand) {
+	public void setBrand(String brand) {
 		this.brand = brand;
 	}
 
@@ -37,15 +39,30 @@ class Electronics {
 		this.model = model;
 	}
 
-	public double power() {
-		return power;
+	public double price() {
+		return price;
 	}
 
-	public void setPower(double power) {
-		this.power = power;
+	public void setPrice(double price) {
+		this.price = price;
 	}
 
 	public void display() {
 	System.out.println("Brand: " + brand + "" + "Model: " + model + "" + "Price: " + price);	
 	}
-}
+
+	public void edit(Scanner sc) {
+		System.out.println("Enter the brand or press [ENTER] to remain unchanged");
+        String brand = sc.nextLine();
+        setBrand( brand.length() > 0 ? brand : this.brand);
+
+        System.out.println("Enter the new model or press [ENTER] to skip");
+        String SKU = sc.nextLine();
+        setModel( model.length() > 0 ? SKU : this.model);
+
+        System.out.println("Enter the new price or press [ENTER] to skip");
+        String price = sc.nextLine();
+        setPrice(price.length() > 0 ? Double.parseDouble(price) : this.price);
+        
+	}
+} 
