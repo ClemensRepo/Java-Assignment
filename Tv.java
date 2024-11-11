@@ -1,7 +1,8 @@
-class Tv {
-	int screenSize;
-	public screenSize(String name, String model, double power, int screenSize) {
-		super(name, model, power);
+class Tv extends Electronics {
+	private int screenSize;
+
+	public Tv(String brand, String model, double price, double power, int screenSize) {
+		super(brand, model, price, power);
         this.screenSize = screenSize;
 	}
 
@@ -11,5 +12,10 @@ class Tv {
 
 	public void setScreenSize(int screenSize) {
 		this.screenSize = screenSize;
+	}
+
+	public void display() {
+		super.display();
+		System.out.println("Screen size " + screenSize );
 	}
 }

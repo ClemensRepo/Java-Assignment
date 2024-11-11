@@ -1,12 +1,12 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class Main {
+private class Main {
 
-    Scanner sc = new Scanner(System.in);
+    private static Scanner sc = new Scanner(System.in);
     private static ArrayList<Electronics> electronicProducts= new ArrayList<>();
 
-	public static void main(String[] args) {
+	private static void main(String[] args) {
         
         while(true) {
             
@@ -24,7 +24,7 @@ public class Main {
             }else if (userChoice == 2) {
                 addTv();
             }else if (userChoice == 3) {
-                addVacuumCleaner();
+                addComputer();
             }else if (userChoice == 4) {
                 updateElectronic();
             }else if (userChoice == 5) {
@@ -37,12 +37,12 @@ public class Main {
         
         }
 
-        public static void addTv() {
+        private static void addTv() {
 
            Electronics p;
 
             System.out.println("Enter the brand");
-            String brand = sc.nextLine()
+            String brand = sc.nextLine();
             sc.nextLine();
             System.out.println("Enter the model");
             String model = sc.nextLine();
@@ -57,12 +57,12 @@ public class Main {
             electronicProducts.add(p);
         }
 
-        public static void addTv() {
+        private static void addComputer() {
 
             Electronics p;
  
              System.out.println("Enter the brand");
-             String brand = sc.nextLine()
+             String brand = sc.nextLine();
              sc.nextLine();
              System.out.println("Enter the model");
              String model = sc.nextLine();
@@ -70,14 +70,20 @@ public class Main {
              System.out.println("Enter the power");
              double power = sc.nextDouble();
              sc.nextLine();
-             System.out.println("Enter the suction power");
-             double screensize = sc.nextDouble();
+             System.out.println("Enter the CPU");
+             double cpu = sc.nextLine();
+             sc.nextLine();
+             System.out.println("Enter the RAM");
+             double ram = sc.nextDouble();
+             sc.nextLine();
+             System.out.println("Enter the SSD");
+             double ssd = sc.nextDouble();
  
-             p = new vacuumCleaner(brand, model, power, screensize);          
+             p = new vacuumCleaner(brand, model, power, cpu, ram, ssd);          
              electronicProducts.add(p);  
          }
 
-        public static void displayAllElectronics() {
+        private static void displayAllElectronics() {
             for(int i = 0; i < electronicProducts.size(); i++) {
                 Electronics e = electronicProducts.get(i);
                 System.out.println("Index of product is " + i);
@@ -85,7 +91,7 @@ public class Main {
             }
         }
 
-        public static void updateElectronic() {
+        private static void updateElectronic() {
             displayAllElectronics();
             System.out.println("Key in the index of the electronic product you want to UPDATE");
             electronicProductIndex = sc.nextInt();
@@ -95,7 +101,7 @@ public class Main {
 
         }
 
-        public static void deleteElectronics() {
+        private static void deleteElectronics() {
             displayAllElectronics();
             System.out.println("Key in the index of the elctronic product you want to DELETE");
             electronicProductIndex = sc.nextInt();
