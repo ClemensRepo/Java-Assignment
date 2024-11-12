@@ -46,15 +46,19 @@ class computer extends Electronics {
 
 
         System.out.println(("Enter the new cpu or press ENTER to skip"));
-        int cpu = sc.nextInt();
-        setcpu(cpu.length() > 0 ? cpu : this.cpu);
+        String cpu = sc.nextLine();
+        setCpu(cpu.length() > 0 ? cpu : this.cpu);
         
 		System.out.println("Enter the new ram or press ENTER to skip");
-        String ram = sc.nextLine();
-        setram (ram.length() > 0 ? ram : this.ram);
+        double ram = sc.nextDouble();
+        setRam (ram > 0 ? ram : this.ram);
 
         System.out.println("Enter the new ssd or press ENTER to skip");
-        String ssd = sc.nextLine();
-        setssd ( ssd.length() > 0 ? ssd : this.ssd);
+        double ssd = sc.nextDouble();
+        setSsd ( ssd > 0 ? ssd : this.ssd);
     }
+
+	public double calculateSalesTax() {
+		return getPriceWithGST;
+	}
 }

@@ -28,7 +28,7 @@ public class Main {
             }else if (userChoice == 4) {
                 updateElectronic();
             }else if (userChoice == 5) {
-                deleteElectronics();
+                deleteElectronic();
             }else if (userChoice == 6) {
                 break;
             }else {
@@ -47,13 +47,16 @@ public class Main {
             System.out.println("Enter the model");
             String model = sc.nextLine();
             sc.nextLine();
+            System.out.println("Enter the price");
+            double price = sc.nextDouble();
+            sc.nextLine();
             System.out.println("Enter the power");
             double power = sc.nextDouble();
             sc.nextLine();
             System.out.println("Enter the screen size");
             double screensize = sc.nextInt();
 
-            p = new Tv(brand, model, power, screensize);    
+            p = new Tv(brand, model, price, power, screensize);    
             electronicProducts.add(p);
         }
 
@@ -67,6 +70,9 @@ public class Main {
              System.out.println("Enter the model");
              String model = sc.nextLine();
              sc.nextLine();
+             System.out.println("Enter the price");
+             double price = sc.nextDouble();
+             sc.nextLine();
              System.out.println("Enter the power");
              double power = sc.nextDouble();
              sc.nextLine();
@@ -79,7 +85,7 @@ public class Main {
              System.out.println("Enter the SSD");
              double ssd = sc.nextDouble();
  
-             p = new vacuumCleaner(brand, model, power, cpu, ram, ssd);          
+             p = new vacuumCleaner(brand, model, price, power, cpu, ram, ssd);          
              electronicProducts.add(p);  
         }
 
@@ -101,13 +107,13 @@ public class Main {
 
         }
 
-        private static void deleteElectronics() {
+        private static void deleteElectronic() {
             displayAllElectronics();
             System.out.println("Key in the index of the elctronic product you want to DELETE");
             electronicProductIndex = sc.nextInt();
             sc.nextLine();
             electronicProducts.remove(electronicProductIndex);
-            displayAllElectronics();
+            displayAllElectronics(sc);
         }
 	}
 }

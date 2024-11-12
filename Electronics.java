@@ -12,13 +12,11 @@ class Electronics {
 		this.brand = "";
 		this.model = "N/A";
 		this.price = 0;
-		this.price = 0;
 	}
 
-	public Electronics(String brand, String model, double price, double price) {
+	public Electronics(String brand, String model, double price) {
 		this.brand = brand;
 		this.model = model;
-		this.price = price;
 		this.price = price;
 	}
 
@@ -61,14 +59,14 @@ class Electronics {
         setModel( model.length() > 0 ? model : this.model);
 
         System.out.println("Enter the new price or press [ENTER] to skip");
-        String price = sc.nextLine();
+        String price = sc.nextDouble();
         setPrice(price.length() > 0 ? Double.parseDouble(price) : this.price);
         
 	}
 
-	public abstract double calculateSalesTax(); // no idea on how to calculate sale tax for an abstract producr
+	public abstract double calculateSalesTax(); 
     
-    public double getSalesTax() {
+	public double getSalesTax() {
         return calculateSalesTax();
     }
 } 

@@ -18,17 +18,20 @@ class Tv extends Electronics {
 
 	public void display() {
 		super.display();
-		System.out.println("Screen size " + screenSize );
+		System.out.println("Screen size: " + screenSize );
 	}
 
 	public void edit(Scanner sc) {
         super.edit(sc); 
 
-
         System.out.println(("Enter the new screenSize or press ENTER to skip"));
         int screenSize = sc.nextInt();
-        setscreenSize(screenSize.length() > 0 ? screenSize : this.screenSize);
+        setScreenSize(screenSize > 0 ? screenSize : this.screenSize);
         
 	}
 
+	
+	public double calculateSalesTax() {
+		return getPriceWithGST;
+	}
 }
