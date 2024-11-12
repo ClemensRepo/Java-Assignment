@@ -52,17 +52,23 @@ class Electronics {
 	}
 
 	public void edit(Scanner sc) {
-		System.out.println("Enter the brand or press [ENTER] to remain unchanged");
+		System.out.println("Enter the new brand or press [ENTER] to remain unchanged");
         String brand = sc.nextLine();
         setBrand( brand.length() > 0 ? brand : this.brand);
 
         System.out.println("Enter the new model or press [ENTER] to skip");
-        String SKU = sc.nextLine();
-        setModel( model.length() > 0 ? SKU : this.model);
+        String model = sc.nextLine();
+        setModel( model.length() > 0 ? model : this.model);
 
         System.out.println("Enter the new price or press [ENTER] to skip");
         String price = sc.nextLine();
         setPrice(price.length() > 0 ? Double.parseDouble(price) : this.price);
         
 	}
+
+	public abstract double calculateSalesTax(); // no idea on how to calculate sale tax for an abstract producr
+    
+    public double getSalesTax() {
+        return calculateSalesTax();
+    }
 } 

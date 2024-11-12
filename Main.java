@@ -1,12 +1,12 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
-private class Main {
+public class Main {
 
     private static Scanner sc = new Scanner(System.in);
-    private static ArrayList<Electronics> electronicProducts= new ArrayList<>();
+    private static ArrayList<Electronics> electronicProducts = new ArrayList<>();
 
-	private static void main(String[] args) {
+    private static void main(String[] args) {
         
         while(true) {
             
@@ -81,7 +81,7 @@ private class Main {
  
              p = new vacuumCleaner(brand, model, power, cpu, ram, ssd);          
              electronicProducts.add(p);  
-         }
+        }
 
         private static void displayAllElectronics() {
             for(int i = 0; i < electronicProducts.size(); i++) {
@@ -107,6 +107,7 @@ private class Main {
             electronicProductIndex = sc.nextInt();
             sc.nextLine();
             electronicProducts.remove(electronicProductIndex);
+            displayAllElectronics();
         }
 	}
 }

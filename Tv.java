@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class Tv extends Electronics {
 	private int screenSize;
 
@@ -18,4 +20,15 @@ class Tv extends Electronics {
 		super.display();
 		System.out.println("Screen size " + screenSize );
 	}
+
+	public void edit(Scanner sc) {
+        super.edit(sc); 
+
+
+        System.out.println(("Enter the new screenSize or press ENTER to skip"));
+        int screenSize = sc.nextInt();
+        setscreenSize(screenSize.length() > 0 ? screenSize : this.screenSize);
+        
+	}
+
 }

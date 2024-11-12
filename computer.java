@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class computer extends Electronics {
 	private String cpu;
 	private double ram;
@@ -39,4 +41,20 @@ class computer extends Electronics {
 		System.out.println("CPU: " + cpu + "" + "RAM: " + ram + "" + "SSD: " + ssd);
 	}
 
+	public void edit(Scanner sc) {
+        super.edit(sc); 
+
+
+        System.out.println(("Enter the new cpu or press ENTER to skip"));
+        int cpu = sc.nextInt();
+        setcpu(cpu.length() > 0 ? cpu : this.cpu);
+        
+		System.out.println("Enter the new ram or press ENTER to skip");
+        String ram = sc.nextLine();
+        setram (ram.length() > 0 ? ram : this.ram);
+
+        System.out.println("Enter the new ssd or press ENTER to skip");
+        String ssd = sc.nextLine();
+        setssd ( ssd.length() > 0 ? ssd : this.ssd);
+    }
 }
