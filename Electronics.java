@@ -9,7 +9,7 @@ class Electronics {
 	protected double price;
 
 	public Electronics() {
-		this.brand = "";
+		this.brand = "N/A";
 		this.model = "N/A";
 		this.price = 0;
 	}

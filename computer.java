@@ -5,6 +5,13 @@ class computer extends Electronics {
 	private double ram;
 	private double ssd;
 
+	public Computer() {
+		super();
+		this.cpu = "N/A";
+		this.ram = 0;
+		this.ssd = 0;
+	}
+
 	public computer(String brand, String model, double price, double power, String cpu, double ram, double ssd) {
 		super(brand, model, price, power);
 		this.cpu = cpu;

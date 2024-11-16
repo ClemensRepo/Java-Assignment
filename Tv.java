@@ -1,7 +1,12 @@
 import java.util.Scanner;
 
-class Tv extends Electronics {
+abstract class Tv extends Electronics {
 	private int screenSize;
+
+	public Tv() {
+		super();
+		this.screenSize = 0;
+	}
 
 	public Tv(String brand, String model, double price, double power, int screenSize) {
 		super(brand, model, price, power);

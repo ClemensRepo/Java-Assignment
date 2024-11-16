@@ -6,13 +6,13 @@ public class Main {
     private static Scanner sc = new Scanner(System.in);
     private static ArrayList<Electronics> electronicProducts = new ArrayList<>();
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         
         while(true) {
             
             System.out.println("1) Display all electronics");
             System.out.println("2) Add TV");
-            System.out.println("3) Add vacuum cleaner");
+            System.out.println("3) Add Computer");
             System.out.println("4) Update electronics");
             System.out.println("5) Delete electronics");
             System.out.println("6) Quit");
@@ -54,7 +54,7 @@ public class Main {
             double power = sc.nextDouble();
             sc.nextLine();
             System.out.println("Enter the screen size");
-            double screensize = sc.nextInt();
+            int screensize = sc.nextInt();
 
             p = new Tv(brand, model, price, power, screensize);    
             electronicProducts.add(p);
