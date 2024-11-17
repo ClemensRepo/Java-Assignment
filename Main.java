@@ -49,10 +49,8 @@ public class Main {
             sc.nextLine();
             System.out.println("Enter the price");
             double price = sc.nextDouble();
-            sc.nextLine();
             System.out.println("Enter the power");
             double power = sc.nextDouble();
-            sc.nextLine();
             System.out.println("Enter the screen size");
             int screensize = sc.nextInt();
 
@@ -72,20 +70,16 @@ public class Main {
              sc.nextLine();
              System.out.println("Enter the price");
              double price = sc.nextDouble();
-             sc.nextLine();
              System.out.println("Enter the power");
              double power = sc.nextDouble();
-             sc.nextLine();
              System.out.println("Enter the CPU");
-             double cpu = sc.nextLine();
-             sc.nextLine();
+             String cpu = sc.nextLine();
              System.out.println("Enter the RAM");
              double ram = sc.nextDouble();
-             sc.nextLine();
              System.out.println("Enter the SSD");
              double ssd = sc.nextDouble();
  
-             p = new vacuumCleaner(brand, model, price, power, cpu, ram, ssd);          
+             p = new Computer(brand, model, price, power, cpu, ram, ssd);          
              electronicProducts.add(p);  
         }
 
@@ -100,9 +94,8 @@ public class Main {
         private static void updateElectronic() {
             displayAllElectronics();
             System.out.println("Key in the index of the electronic product you want to UPDATE");
-            electronicProductIndex = sc.nextInt();
-            sc.nextLine();
-            Electronics e = electronicProducts.get(i);
+            int electronicProductIndex = sc.nextInt();
+            Electronics e = electronicProducts.get(electronicProductIndex);
             e.editElectronic(sc);
 
         }
@@ -111,7 +104,6 @@ public class Main {
             displayAllElectronics();
             System.out.println("Key in the index of the elctronic product you want to DELETE");
             electronicProductIndex = sc.nextInt();
-            sc.nextLine();
             electronicProducts.remove(electronicProductIndex);
             displayAllElectronics(sc);
         }

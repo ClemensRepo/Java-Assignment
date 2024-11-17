@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class computer extends Electronics {
+class Computer extends Electronics {
 	private String cpu;
 	private double ram;
 	private double ssd;
@@ -12,7 +12,7 @@ class computer extends Electronics {
 		this.ssd = 0;
 	}
 
-	public computer(String brand, String model, double price, double power, String cpu, double ram, double ssd) {
+	public Computer(String brand, String model, double price, double power, String cpu, double ram, double ssd) {
 		super(brand, model, price, power);
 		this.cpu = cpu;
 		this.ram = ram;
@@ -65,7 +65,7 @@ class computer extends Electronics {
         setSsd ( ssd > 0 ? ssd : this.ssd);
     }
 
-	public double calculateSalesTax() {
-		return getPriceWithGST;
-	}
+	// public double calculateSalesTax() {
+	// 	return getPriceWithGST;
+	// }
 }

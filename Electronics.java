@@ -6,7 +6,7 @@ class Electronics {
 	protected String brand;
 	protected String model;
 	protected double price;
-	protected double price;
+	protected double power;
 
 	public Electronics() {
 		this.brand = "N/A";

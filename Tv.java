@@ -36,7 +36,7 @@ abstract class Tv extends Electronics {
 	}
 
 	
-	public double calculateSalesTax() {
-		return getPriceWithGST;
-	}
+	// public double calculateSalesTax() {
+	// 	return getPriceWithGST;
+	// }
 }
