@@ -45,11 +45,11 @@ class Computer extends Electronics {
 
 	public void display() {
 		super.display();
-		System.out.println("CPU: " + cpu + "" + "RAM: " + ram + "" + "SSD: " + ssd);
+		System.out.println("CPU: " + cpu + " " + "RAM: " + ram + " " + "SSD: " + ssd);
 	}
 
 	public void edit(Scanner sc) {
-        super.edit(sc); 
+        super.editElectronic(sc); 
 
 
         System.out.println(("Enter the new cpu or press ENTER to skip"));
@@ -58,14 +58,13 @@ class Computer extends Electronics {
         
 		System.out.println("Enter the new ram or press ENTER to skip");
         double ram = sc.nextDouble();
+		sc.nextLine();
         setRam (ram > 0 ? ram : this.ram);
 
         System.out.println("Enter the new ssd or press ENTER to skip");
         double ssd = sc.nextDouble();
+		sc.nextLine();
         setSsd ( ssd > 0 ? ssd : this.ssd);
     }
-
-	// public double calculateSalesTax() {
-	// 	return getPriceWithGST;
-	// }
+	
 }

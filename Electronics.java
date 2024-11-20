@@ -1,8 +1,7 @@
 import java.util.Scanner;
 
-class Electronics {
-	private static int count;
-
+abstract class Electronics {
+	
 	protected String brand;
 	protected String model;
 	protected double price;
@@ -14,10 +13,11 @@ class Electronics {
 		this.price = 0;
 	}
 
-	public Electronics(String brand, String model, double price) {
+	public Electronics(String brand, String model, double price, double power) {
 		this.brand = brand;
 		this.model = model;
 		this.price = price;
+		this.power = power;
 	}
 
 
@@ -49,7 +49,7 @@ class Electronics {
 	System.out.println("Brand: " + brand + "" + "Model: " + model + "" + "Price: " + price);	
 	}
 
-	public void edit(Scanner sc) {
+	public void editElectronic(Scanner sc) {
 		System.out.println("Enter the new brand or press [ENTER] to remain unchanged");
         String brand = sc.nextLine();
         setBrand( brand.length() > 0 ? brand : this.brand);
@@ -59,14 +59,10 @@ class Electronics {
         setModel( model.length() > 0 ? model : this.model);
 
         System.out.println("Enter the new price or press [ENTER] to skip");
-        String price = sc.nextDouble();
+        String price = sc.nextLine();
+		sc.nextLine();
         setPrice(price.length() > 0 ? Double.parseDouble(price) : this.price);
         
 	}
 
-	public abstract double calculateSalesTax(); 
-    
-	public double getSalesTax() {
-        return calculateSalesTax();
-    }
-} 
+}

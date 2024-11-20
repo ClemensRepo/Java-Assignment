@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-abstract class Tv extends Electronics {
+class Tv extends Electronics {
 	private int screenSize;
 
 	public Tv() {
@@ -12,6 +12,7 @@ abstract class Tv extends Electronics {
 		super(brand, model, price, power);
         this.screenSize = screenSize;
 	}
+
 
 	public int getScreenSize() {
 		return screenSize;
@@ -27,7 +28,7 @@ abstract class Tv extends Electronics {
 	}
 
 	public void edit(Scanner sc) {
-        super.edit(sc); 
+        super.editElectronic(sc); 
 
         System.out.println(("Enter the new screenSize or press ENTER to skip"));
         int screenSize = sc.nextInt();
@@ -35,8 +36,4 @@ abstract class Tv extends Electronics {
         
 	}
 
-	
-	// public double calculateSalesTax() {
-	// 	return getPriceWithGST;
-	// }
 }
