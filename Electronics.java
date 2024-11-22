@@ -46,7 +46,7 @@ abstract class Electronics {
 	}
 
 	public void display() {
-	System.out.println("Brand: " + brand + "" + "Model: " + model + "" + "Price: " + price);	
+	System.out.println("Brand: " + brand + " " + "Model: " + model + " " + "Price: " + price);	
 	}
 
 	public void editElectronic(Scanner sc) {

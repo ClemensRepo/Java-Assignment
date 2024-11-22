@@ -68,20 +68,22 @@ public class Main {
  
              System.out.println("Enter the brand");
              String brand = sc.nextLine();
-             sc.nextLine();
              System.out.println("Enter the model");
              String model = sc.nextLine();
-             sc.nextLine();
              System.out.println("Enter the price");
              double price = sc.nextDouble();
+             sc.nextLine();
              System.out.println("Enter the power");
              double power = sc.nextDouble();
+             sc.nextLine();
              System.out.println("Enter the CPU");
              String cpu = sc.nextLine();
              System.out.println("Enter the RAM");
              double ram = sc.nextDouble();
+             sc.nextLine();
              System.out.println("Enter the SSD");
              double ssd = sc.nextDouble();
+             sc.nextLine();
  
              p = new Computer(brand, model, price, power, cpu, ram, ssd);          
              electronicProducts.add(p);  
